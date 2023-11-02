@@ -21,31 +21,96 @@ header {
     margin-bottom: 10px;
 }
 
-nav {
-    display: inline;
-    float: left;
-    margin-top: 30px;
-    font-size: 20px;
-}
-
 #logo {
     display: block;
     float: left;
 }
 
-.navItem {
+/* Style for the navigation menu */
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    position: relative;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style for the links in the menu */
+nav a {
     text-decoration: none;
     color: black;
     padding: 15px;
     border-radius: 5px 5px 30px 5px;
+    margin-left: 5px;
     transition: all 0.15s ease-in-out 0.05s;
 }
 
-.navItem:hover {
-    background-color: #ffffff;
+/* Style for the links in the menu */
+nav a:hover {
+    background-color: #e0e0e0;
     transition: all 0.15s ease-in-out 0.05s;
     opacity: 1
 }
+
+/* Style for the subcategories(same as the links) */
+.sub-category > li:hover {
+    background-color: #e0e0e0;
+    transition: all 0.15s ease-in-out 0.05s;
+    opacity: 1;
+}
+
+/* Style for subcategories and position subcategories below the  list ,at the same level*/ 
+.sub-category {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    background-color: #ffcd38;
+    padding: 5px;
+}
+
+/* Display subcategories when hovering over the list item */
+nav li:hover > ul {
+    display: block;
+}
+
+/* Style for sublist of subcategories and position sublist to the right of subcategory*/
+.sub-sub-category {
+    display: none;
+    position: absolute;
+    top: 0; 
+    left: 100%; 
+    background-color: #ffcd38;
+    padding: 5px;
+    white-space: nowrap; 
+}
+
+/* Display sublist of subcategories when hovering over the subcategory */
+.sub-category li:hover > ul {
+    display: block;
+}
+
+/* Style for submenu items */
+.sub-category li {
+    display: block;
+    clear: both;
+    width: 100%;
+
+}
+
+/* Style for submenu links */
+.sub-category li a {
+    padding: 10px;
+    border-radius: 0;
+}
+
+
 
 header img {
     transition: transform .2s;
@@ -74,9 +139,10 @@ main {
 .postit {
     background-color: #ffcd38;
     width: 600px;
+    float:left;
     border-radius: 10px 10px 80px 10px;
     transition: transform .2s;
-    margin: 0 8.5% 5% 8.5%;
+    margin: 0 5% 5% 5%;
     padding-bottom: 10px;
     box-shadow: rgb(51, 51, 51) 10px 10px 30px;
 }
@@ -173,3 +239,4 @@ h1 {
     float: left; 
     margin-right: 10px; 
 }
+
