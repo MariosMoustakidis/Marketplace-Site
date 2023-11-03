@@ -6,7 +6,7 @@ body {
 
     font-family: 'Calibri', Times, serif;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.733);
+    background-color: #000000bb;
 }
 
 
@@ -39,6 +39,8 @@ nav li {
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
+    padding: 5px;
+    border-radius: 5px 5px 30px 5px;
 }
 
 /* Style for the links in the menu */
@@ -53,14 +55,14 @@ nav a {
 
 /* Style for the links in the menu */
 nav a:hover {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     transition: all 0.15s ease-in-out 0.05s;
     opacity: 1
 }
 
 /* Style for the subcategories(same as the links) */
 .sub-category > li:hover {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     transition: all 0.15s ease-in-out 0.05s;
     opacity: 1;
 }
@@ -72,7 +74,8 @@ nav a:hover {
     top: 100%; 
     left: 0; 
     background-color: #ffcd38;
-    padding: 5px;
+    padding: 5px 0 5px 0;
+    margin-top: 10px;
 }
 
 /* Display subcategories when hovering over the list item */
@@ -101,13 +104,11 @@ nav li:hover > ul {
     display: block;
     clear: both;
     width: 100%;
-
 }
 
 /* Style for submenu links */
 .sub-category li a {
     padding: 10px;
-    border-radius: 0;
 }
 
 
@@ -133,6 +134,8 @@ main {
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 22px;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
 /*styles the different divs like categories or listings*/
@@ -240,3 +243,69 @@ h1 {
     margin-right: 10px; 
 }
 
+.tech {
+    float:left;
+    color: rgb(247, 247, 247);
+    text-align: center;
+}
+
+.tech article {
+    font-size: 27px;
+}
+
+.tech img{
+    width: 800px;
+    height: 400px;
+    margin: 0 3% 2% 3%;
+    border-radius: 20px;
+    box-shadow: rgb(51, 51, 51) 10px 10px 10px;
+}
+
+.tech form {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    background-color: #ffcd38;
+    outline-style: none;
+    float: left;
+    width: 800px;
+    border-radius: 20px;
+    height: 400px;
+    margin: 0 3% 2% 3%;
+    padding-top: 10px;
+    font-size: 27px;
+    box-shadow: rgb(51, 51, 51) 10px 10px 10px;
+}
+.tech form legend {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tech form label {
+    margin-left: 40px;
+}
+
+.tech input {
+    border-radius: 10px;
+}
+
+.tech textarea {
+    border-radius: 10px;
+}
+
+.tech form textarea {
+    margin-left: 40px;
+}
+
+.tech #submit {
+    margin-left: 40px;
+}
+
+.tech form p {
+    display: inline;
+}
+
+.tech form p:last-child {
+    font-size: 18px;
+}
