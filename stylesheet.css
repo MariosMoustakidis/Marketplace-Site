@@ -18,7 +18,7 @@ header {
     right: 0;
     left: 0;
     height: 85px;
-    margin-bottom: 10px;
+    z-index: 2;
 }
 
 #logo {
@@ -40,7 +40,7 @@ nav li {
     font-size: 20px;
     font-weight: bold;
     padding: 5px;
-    border-radius: 5px 5px 30px 5px;
+    border-radius: 5px 5px 10px 5px;
 }
 
 /* Style for the links in the menu */
@@ -87,7 +87,7 @@ nav li:hover > ul {
 .sub-sub-category {
     display: none;
     position: absolute;
-    top: 0; 
+    top: -20px; 
     left: 100%; 
     background-color: #ffcd38;
     padding: 5px;
@@ -108,7 +108,7 @@ nav li:hover > ul {
 
 /* Style for submenu links */
 .sub-category li a {
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -200,21 +200,39 @@ ul {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
+    color:#000000;
+    font-style:italic ;
+    text-align: center;
+    white-space: nowrap; 
+    width: auto;
+    background: linear-gradient(to bottom, #ffcd38, #c3eaea9d);
+    margin: 0;
+    border-radius: 0px 0px 30px 30px;
+    padding:0px 40px 5px 40px;
+    position: fixed;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .submenu {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 26px;
+    font-size: 25px;
+    font-weight: bold;
     text-align: left;
+    padding: 10px 10px 30px 5px;
 }
 
 .submenu a {
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
+.submenu a:hover{
+    color: #ffcd38;
+}
 
 .ads a{
     display:block;
@@ -244,13 +262,13 @@ h1 {
 }
 
 .tech {
-    float:left;
     color: rgb(247, 247, 247);
     text-align: center;
 }
 
 .tech article {
     font-size: 27px;
+    margin-top: 150px;
 }
 
 .tech img{
@@ -308,4 +326,52 @@ h1 {
 
 .tech form p:last-child {
     font-size: 18px;
+}
+
+
+#categories {
+    margin-top: 150px;
+}
+
+#categories .postit {
+    width: 900px;
+    padding: 0;
+    margin: 10px;
+}
+
+#categories .postit a{
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 25px;
+    color: #000000;
+}
+
+#categories .postit img{
+    float: left;
+}
+
+#categories .postit h2{
+    color: rgb(17, 1, 1);
+    font-size: 2.2em;
+    text-align: center;
+    padding: 10px;
+    margin: 0; 
+    background: linear-gradient(to bottom, #ffcd38, #0b080089);
+    font-weight: bolder;
+}
+
+#categories .postit ul{
+    margin: 0;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+#categories .postit li::before{
+    content: "→";
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#categories .postit li:hover{
+    transform: scale(1.02);
 }
