@@ -12,7 +12,7 @@ body {
 header {
     position: fixed;
     width: 100%;
-    background-color: #ffcd38f0;
+    background-color: #ffbf00;
     top: 0;
     right: 0;
     left: 0;
@@ -50,7 +50,7 @@ footer {
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #ffcd38;
+    background-color: #ffbf00;
 }
 
 /*makes the images pop up when hovering the mouse over it*/
@@ -126,7 +126,7 @@ nav li:hover>ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #ffcd38;
+    background-color: #ffbf00;
     padding: 5px 0 5px 0;
     margin-top: 10px;
 }
@@ -138,7 +138,7 @@ nav li:hover>ul {
     position: absolute;
     top: -20px;
     left: 100%;
-    background-color: #ffcd38;
+    background-color: #ffbf00;
     padding: 5px;
     white-space: nowrap;
 }
@@ -182,7 +182,7 @@ nav li:hover>ul {
 
 /*styles the different divs like categories or listings*/
 .postit {
-    background-color: #ffcd38;
+    background-color: #ffbf00;
     width: 600px;
     float: left;
     border-radius: 10px 10px 80px 10px;
@@ -198,9 +198,10 @@ nav li:hover>ul {
     text-align: center;
     padding: 10px;
     margin: 0;
-    background: linear-gradient(to bottom, #ffcd38, #0b080070);
+    background: linear-gradient(to bottom, #ffbf00, #d19d00);
     font-weight: bolder;
     font-style: italic;
+    border-radius: 10px 10px 0px 0px;
 
 }
 
@@ -225,7 +226,7 @@ nav li:hover>ul {
 .postit img {
     width: 450px;
     height: 250px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .postit h3 {
@@ -247,8 +248,8 @@ h1 {
     text-align: center;
     white-space: nowrap;
     width: auto;
-    background: linear-gradient(to bottom, #ffcd38dc, #c3eaea9d);
-    margin: 0;
+    background: #ffbf00;
+    margin: 2px 0 0 0;
     border-radius: 0px 0px 30px 30px;
     padding: 0px 40px 5px 40px;
     position: fixed;
@@ -271,7 +272,7 @@ h1 {
 }
 
 .submenu a:hover {
-    color: #ffcd38;
+    color: #ffbf00;
 }
 
 #categories .postit {
@@ -282,6 +283,7 @@ h1 {
 
 #categories .postit img {
     float: left;
+    border-radius: 0px 0px 0px 10px;
 }
 
 
@@ -303,18 +305,23 @@ h1 {
 
 
 #articles .postit img {
-    height: 300px
+    height: 300px;
+    margin-top: 20px;
 }
 
 #articles{
     margin-top: 84px;
 }
 
-#articles .postit a::before {
+#articles .postit #link::before {
     content: "→";
     margin-right: 10px;
     font-weight: bold;
     font-size: 15px;
+}
+
+.postit #highlight {
+    font-weight: bold;
 }
 
 #products{
@@ -325,7 +332,7 @@ h1 {
     font-size: 1.4em;
     margin: 20px 5px;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
 }
 
 #products h2 {
@@ -334,7 +341,7 @@ h1 {
     text-align: center;
     padding: 10px;
     margin: 0;
-    background: linear-gradient(to bottom, #ffcd38, #0b080070);
+    background: #ffbf00;
     font-weight: bolder;
 }
 
@@ -362,11 +369,11 @@ h1 {
 }
 
 #products tr:nth-child(even) {
-    background-color: #ffffffa9;
+    background-color: #ffffff;
 }
 
 #products tr:nth-child(odd) {
-    background-color: #ffcd38e7;
+    background-color: #ffbf00;
 }
 
 #products .link {
@@ -395,7 +402,7 @@ h1 {
 }
 
 #aboutus .postit {
-    border-radius: 0px 0px 60px 60px;
+    border-radius: 10px 10px 60px 60px;
 }
 
 #aboutus .postit h3 {
@@ -409,6 +416,7 @@ h1 {
     height: 400px;
     border-radius: 20px;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
+    margin-top: 20px;
 }
 
 #aboutus .postit p {
@@ -447,7 +455,7 @@ h1 {
 .tech img {
     width: 800px;
     height: 400px;
-    margin: 0 3% 2% 3%;
+    margin: 0 3% 5% 3%;
     border-radius: 20px;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
 }
@@ -455,13 +463,13 @@ h1 {
 .tech form {
     text-align: left;
     color: rgb(0, 0, 0);
-    background-color: #ffcd38;
+    background-color: #ffbf00;
     outline-style: none;
     float: left;
     width: 800px;
     border-radius: 20px;
     height: 400px;
-    margin: 0 3% 2% 3%;
+    margin: 0 3% 5% 3%;
     padding-top: 10px;
     font-size: 27px;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
