@@ -7,6 +7,14 @@ body {
     font-family: 'Calibri', Times, serif;
     margin: 0;
     background-color: #000000bb;
+    width: 100%;
+    display:grid;
+    grid-template-rows: 85px auto 180px;
+    grid-template-areas: 
+    "header" 
+    "main" 
+    "footer";
+
 }
 
 header {
@@ -17,17 +25,22 @@ header {
     right: 0;
     left: 0;
     height: 85px;
-    z-index: 2;
+    z-index: 200;
+    grid-area: header;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 #logo {
     display: block;
-    float: left;
 }
 
 header img {
     transition: transform .2s;
     height: 85px;
+    grid-area: logo;
 }
 
 header img:hover {
@@ -37,20 +50,21 @@ header img:hover {
 /*makes main not overlap with the fixed header*/
 main {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 50px;
     width: 100%;
+    grid-area: main;
 }
 
 /*styles the footer*/
 footer {
     overflow: hidden;
     width: 100%;
-    clear: left;
     text-align: center;
     bottom: 0;
     right: 0;
     left: 0;
     background-color: #ffbf00;
+    grid-area: footer;
 }
 
 /*makes the images pop up when hovering the mouse over it*/
@@ -78,7 +92,7 @@ footer a {
 /* Style for the navigation menu */
 nav ul {
     list-style: none;
-    padding: 10px;
+    padding: 10px;   
 }
 
 nav li {
@@ -160,8 +174,16 @@ nav li:hover>ul {
     padding: 5px;
 }
 
+#main , #articles , #aboutus , .tech{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+    row-gap: 2em;
+    justify-items: center;
+}
+
 .welcome {
     margin-bottom: 50px;
+    grid-column: 1 /-1;
 }
 
 /* styles the welcome text on the main page*/
@@ -184,7 +206,6 @@ nav li:hover>ul {
 .postit {
     background-color: #ffbf00;
     width: 600px;
-    float: left;
     border-radius: 10px 10px 80px 10px;
     transition: transform .2s;
     margin: 20px 4%;
@@ -202,7 +223,7 @@ nav li:hover>ul {
     font-weight: bolder;
     font-style: italic;
     border-radius: 10px 10px 0px 0px;
-
+    width: 100%;
 }
 
 .postit p {
@@ -275,14 +296,20 @@ h1 {
     color: #ffbf00;
 }
 
+#categories_list{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, auto));
+    justify-items: center;
+}
+
 #categories .postit {
     width: 900px;
     padding: 0;
-    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#categories .postit img {
-    float: left;
+#_ .postit img {
     border-radius: 0px 0px 0px 10px;
 }
 
@@ -291,6 +318,7 @@ h1 {
     margin: 0;
     padding: 10px;
     margin-top: 25px;
+    flex-grow: 2;
 }
 
 #categories .postit li::before {
@@ -310,14 +338,30 @@ h1 {
 }
 
 #articles{
-    margin-top: 84px;
+    margin-top: 0px;
+}
+
+#articles .postit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#articles .postit #link{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+#articles .submenu{
+    grid-column: 1/-1;
+    justify-self: start;
 }
 
 #articles .postit #link::before {
     content: "→";
-    margin-right: 10px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .postit #highlight {
@@ -450,10 +494,11 @@ h1 {
 
 .tech div {
     font-size: 27px;
+    grid-column: 1/-1;
 }
 
 .tech img {
-    width: 800px;
+    width: 700px;
     height: 400px;
     margin: 0 3% 5% 3%;
     border-radius: 20px;
@@ -465,8 +510,7 @@ h1 {
     color: rgb(0, 0, 0);
     background-color: #ffbf00;
     outline-style: none;
-    float: left;
-    width: 800px;
+    width: 600px;
     border-radius: 20px;
     height: 400px;
     margin: 0 3% 5% 3%;
