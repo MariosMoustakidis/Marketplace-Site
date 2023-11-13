@@ -57,11 +57,11 @@ main {
 
 /*styles the footer*/
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
     width: 100%;
-    text-align: center;
-    bottom: 0;
-    right: 0;
     left: 0;
     background-color: #ffbf00;
     grid-area: footer;
@@ -176,7 +176,7 @@ nav li:hover>ul {
 
 #main , #articles , #aboutus , .tech{
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(600px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(700px, auto));
     row-gap: 2em;
     justify-items: center;
 }
@@ -369,7 +369,13 @@ h1 {
 }
 
 #products{
-    margin-top: 84px;
+    margin-top: 0px;
+}
+
+.product_images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #products p {
@@ -498,9 +504,9 @@ h1 {
 }
 
 .tech img {
-    width: 700px;
+    width: 600px;
     height: 400px;
-    margin: 0 3% 5% 3%;
+    margin-bottom: 7%;
     border-radius: 20px;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
 }
@@ -513,7 +519,7 @@ h1 {
     width: 600px;
     border-radius: 20px;
     height: 400px;
-    margin: 0 3% 5% 3%;
+    margin-bottom: 7%;
     padding-top: 10px;
     font-size: 27px;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
