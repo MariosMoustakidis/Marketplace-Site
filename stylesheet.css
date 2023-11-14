@@ -351,6 +351,7 @@ h1 {
     content: "→";
     font-weight: bold;
     font-size: 20px;
+    transition: transform .2s;
 }
 
 /*enlarges the postit when you hover over it*/
@@ -382,6 +383,12 @@ h1 {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: auto;
+    transition: transform .2s;
+}
+
+/*makes the link float when hovering*/
+#articles .postit #link:hover{
+    transform: scale(1.02);
 }
 
 /*puts the submenu in the place we want*/
@@ -396,6 +403,18 @@ h1 {
     font-weight: bold;
     font-size: 20px;
 }
+
+/*cuts the text off at max 3 lines on the articles*/
+#articles .truncate {
+    display: -webkit-box;
+    max-width: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 
 /*makes the fonts bold*/
 .postit #highlight {
@@ -654,6 +673,6 @@ button {
 
 /*makes the button change color when hovering over it and changes the cursor*/
 button:hover, button:focus {
-    background: rgb(44, 44, 44);
+    background: #2c2c2c;
     cursor: pointer;
 }
