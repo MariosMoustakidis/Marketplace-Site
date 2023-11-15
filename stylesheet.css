@@ -178,6 +178,7 @@ nav li:hover>ul {
     padding: 5px;
 }
 
+/*creates a grid for index, cars and smarphones*/
 #main, #articles {
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(550px, auto));
@@ -185,7 +186,7 @@ nav li:hover>ul {
     justify-items: center;
 }
 
-/*creates a grid*/
+/*creates a grid for abouts us and tech*/
 #aboutus , .tech{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(700px, auto));
