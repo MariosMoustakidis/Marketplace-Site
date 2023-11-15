@@ -5,6 +5,7 @@
 
 /*sets a font and background color for the body, it also creates a grid*/
 body {
+    font-size: 100%;
     font-family: 'Calibri', Times, serif;
     margin: 0;
     background-color: #000000bb;
@@ -103,7 +104,7 @@ nav li {
     display: inline;
     position: relative;
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: bold;
     padding: 5px;
     border-radius: 5px 5px 10px 5px;
@@ -147,6 +148,7 @@ nav li:hover>ul {
     background-color: #ffbf00;
     padding: 5px 0 5px 0;
     margin-top: 10px;
+    font-size: 1rem;
 }
 
 
@@ -159,6 +161,7 @@ nav li:hover>ul {
     background-color: #ffbf00;
     padding: 5px;
     white-space: nowrap;
+    font-size: 1rem;
 }
 
 /* Display sublist of subcategories when hovering over the subcategory */
@@ -205,13 +208,13 @@ nav li:hover>ul {
 .welcome p{
     text-align: center;
     color: rgb(255, 255, 255);
-    font-size: 22px;
+    font-size: 1.4em;
     margin:10px;
 }
 
 /*makes fonts bold*/
 .welcome span{
-    font-size: 35px;
+    font-size: 2.5em;
     font-weight: bold;
     color: rgb(255, 255, 255);
     font-style: italic;
@@ -246,7 +249,7 @@ nav li:hover>ul {
 /*puts a small ad sign on the left corner*/
 .postit .ad {
     text-align: left;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 /*adjusts the size of the fonts*/
@@ -258,7 +261,7 @@ nav li:hover>ul {
 /*makes the links black*/
 .postit a {
     white-space: nowrap;
-    font-size: 25px;
+    font-size: 1.4em;
     color: #000000;
     bottom: 0%;
 }
@@ -291,7 +294,7 @@ ul {
 
 /*makes the headers fixed and styles them on each page*/
 h1 {
-    font-size: 40px;
+    font-size: 2.7em;
     color: rgb(255, 255, 255);
     color: #000000;
     font-style: italic;
@@ -299,11 +302,11 @@ h1 {
     white-space: nowrap;
     width: auto;
     background: #ffbf00;
-    margin: 2px 0 0 0;
+    margin: 0;
     border-radius: 0px 0px 30px 30px;
     padding: 0px 40px 5px 40px;
     position: fixed;
-    top: 110px;
+    top: 105px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -311,7 +314,7 @@ h1 {
 
 /*adjust the fonts for the submenu*/
 .submenu {
-    font-size: 25px;
+    font-size: 1.4em;
     font-weight: bold;
     text-align: left;
     padding: 10px 10px 30px 5px;
@@ -366,7 +369,7 @@ h1 {
 #categories .postit li::before {
     content: "→";
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.3em;
     transition: transform .2s;
 }
 
@@ -417,7 +420,7 @@ h1 {
 #articles .postit .link::before {
     content: "→";
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 /*cuts the text off at max 3 lines on the articles*/
@@ -481,7 +484,7 @@ h1 {
     border-collapse: collapse;
     width: auto;
     color: #000000;
-    font-size: 25px;
+    font-size:1.4em;
     text-align: center;
     table-layout: auto;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
@@ -598,7 +601,7 @@ h1 {
 /*aligns the message on tech and makes it the size we want*/
 .tech #tech-msg {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.4em;
     grid-column: 1/-1;
     color: rgb(247, 247, 247);
 }
@@ -705,4 +708,56 @@ button {
 button:hover, button:focus {
     background: #2c2c2c;
     cursor: pointer;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) { /*mobile */
+    body{
+        font-size: 70%;
+    }
+    #main, #articles {
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        justify-items: center;
+    }
+
+    #categories_list{
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    /*creates a grid for abouts us and tech*/
+    #aboutus , .tech{
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        justify-items: center;
+    }
+
+    .postit{
+        margin: 0px 10px 15px 10px;
+        width: 300px;
+    }
+
+    .postit img{
+        width: 200px;
+        height: 200px;
+    }
+    #categories .postit{
+        margin: 0px 10px 15px 10px;
+        width: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #categories .postit img{
+        width: 200px;
+        height: 200px;
+        border-radius: 0px 0px 10px 10px;
+    }
+    #categories .postit ul{
+        margin-top: 0px;
+    }
+    
 }
