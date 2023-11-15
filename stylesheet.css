@@ -178,13 +178,21 @@ nav li:hover>ul {
     padding: 5px;
 }
 
+#main, #articles {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    row-gap: 2em;
+    justify-items: center;
+}
+
 /*creates a grid*/
-#main , #articles , #aboutus , .tech{
+#aboutus , .tech{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(700px, auto));
     row-gap: 2em;
     justify-items: center;
 }
+
 
 /*puts the welcome paragraph in the grid and adjusts it*/
 .welcome {
@@ -212,10 +220,10 @@ nav li:hover>ul {
 /*styles the different divs like categories or listings*/
 .postit {
     background-color: #ffbf00;
-    width: 600px;
+    width: 450px;
     border-radius: 10px 10px 80px 10px;
     transition: transform .2s;
-    margin: 20px 4%;
+    margin-bottom: 5em;
     padding-bottom: 10px;
     box-shadow: rgb(51, 51, 51) 10px 10px 30px;
 }
@@ -234,18 +242,23 @@ nav li:hover>ul {
     width: 100%;
 }
 
+.postit .ad {
+    text-align: left;
+    font-size: 16px;
+}
+
 /*adjusts the size of the fonts*/
 .postit p {
     font-size: 1.4em;
-    margin: 5px;
+    margin: 0px;
 }
 
 /*makes the links black*/
 .postit a {
-    text-decoration: none;
     white-space: nowrap;
     font-size: 25px;
     color: #000000;
+    bottom: 0%;
 }
 
 /*makes the listing hover*/
@@ -256,7 +269,7 @@ nav li:hover>ul {
 
 /*adjusts the image on the postit*/
 .postit img {
-    width: 450px;
+    width: 400px;
     height: 250px;
     border-radius: 10px;
     object-fit: cover;
@@ -407,7 +420,7 @@ h1 {
 /*cuts the text off at max 3 lines on the articles*/
 #articles .truncate {
     display: -webkit-box;
-    max-width: 600px;
+    max-width: 400px;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
@@ -582,6 +595,7 @@ h1 {
     margin-right: auto;
     margin-bottom: 5em;
     box-shadow: rgb(51, 51, 51) 10px 10px 10px;
+    border-radius: 20px;
 }
 
 /*puts 0 margin on h3 and uls*/
