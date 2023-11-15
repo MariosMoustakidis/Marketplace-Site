@@ -282,7 +282,6 @@ nav li:hover>ul {
     font-size: 1em;
     font-style: italic;
     font-weight: bold;
-    white-space: wrap;
 }
 
 /*removes the bullets*/
@@ -396,7 +395,7 @@ h1 {
 }
 
 /*style the font*/
-#articles .postit #link{
+#articles .postit .link{
     font-size: 1.5em;
     font-weight: bold;
     margin-top: auto;
@@ -404,7 +403,7 @@ h1 {
 }
 
 /*makes the link float when hovering*/
-#articles .postit #link:hover{
+#articles .postit .link:hover{
     transform: scale(1.02);
 }
 
@@ -415,7 +414,7 @@ h1 {
 }
 
 /*adds an arrow before the links and makes the bold*/
-#articles .postit #link::before {
+#articles .postit .link::before {
     content: "→";
     font-weight: bold;
     font-size: 20px;
@@ -438,6 +437,11 @@ h1 {
     font-weight: bold;
 }
 
+
+.postit span {
+    font-weight: bold;
+ }
+
 /*makes the top margin 0*/
 #products{
     margin-top: 0px;
@@ -449,6 +453,7 @@ h1 {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 5em;
+    flex-wrap: wrap;
 }
 
 /*adjusts the fonts on the paragraphs*/
