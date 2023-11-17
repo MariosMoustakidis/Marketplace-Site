@@ -369,7 +369,7 @@ h1 {
 
 /*style the font*/
 #articles .postit .link {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     transition: transform .2s;
 }
@@ -1051,6 +1051,11 @@ button:focus {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2em;
         justify-items: center;
+    }
+
+    
+    #articles .postit .link {
+        font-size: 0.9em;
     }
 
     #categories_list {
