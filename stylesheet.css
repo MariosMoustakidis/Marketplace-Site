@@ -10,13 +10,20 @@ body {
     margin: 0;
     background-color: #000000bb;
     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-conteiner{
+    width: 100%;
     display:grid;
     grid-template-rows: 85px auto auto;
     grid-template-areas: 
     "header" 
     "main" 
     "footer";
-
+    flex:1;
 }
 
 /*makes the header fixed in place and adjusts where it needs to be, it also aligns the items inside it*/
@@ -64,6 +71,7 @@ main {
 /*styles the footer*/
 footer {
     display: flex;
+    margin-top: auto;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -250,6 +258,7 @@ nav li:hover>ul {
 .postit .ad {
     text-align: left;
     font-size: 1em;
+    align-self: flex-start;
 }
 
 /*adjusts the size of the fonts*/
@@ -263,7 +272,7 @@ nav li:hover>ul {
     white-space: nowrap;
     font-size: 1.4em;
     color: #000000;
-    bottom: 0%;
+    margin-top: auto;
 }
 
 /*makes the listing hover*/
@@ -285,6 +294,7 @@ nav li:hover>ul {
     font-size: 1em;
     font-style: italic;
     font-weight: bold;
+    text-wrap: wrap;
 }
 
 /*removes the bullets*/
@@ -331,6 +341,11 @@ h1 {
     color: #ffbf00;
 }
 
+#main .postit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*makes a grid for the categories makes it centered*/
 #categories_list{
     display:grid;
@@ -345,11 +360,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1em;
-}
-
-/*adjusts the border radius*/
-#_ .postit img {
-    border-radius: 0px 0px 0px 10px;
 }
 
 /*adjusts the uls on the categories*/
@@ -558,6 +568,9 @@ h1 {
 /*adjusts the border radius of the postits on about us*/
 #aboutus .postit {
     border-radius: 10px 10px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*style the fonts*/
@@ -597,6 +610,7 @@ h1 {
     width: 80%;
     border-radius: 50px;
     margin: 0px;
+    margin-top: auto;
 }
 
 /*changes the color of the button when you hover over it*/
@@ -807,10 +821,10 @@ button:hover, button:focus {
     }
 
     #products img:hover {
-        transform: scale(1.5);
-        cursor: zoom-in;
+        transform:unset;
+        cursor: unset;
     }
-    
+
     #aboutus .postit img {
         width: 250px;
         height: 250px;
@@ -839,4 +853,125 @@ button:hover, button:focus {
         border-radius: 0px 0px 20px 20px;
     }
 
+}
+
+@media screen and (min-width: 481px) and (max-width: 770px) { /* tablet */
+    body{
+        font-size: 80%;
+    }
+
+    h1{
+        position: absolute;
+    }
+    #main, #articles {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2em;
+        justify-items: center;
+    }
+
+    #categories_list{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+
+    /*creates a grid for abouts us and tech*/
+    #aboutus , .tech{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 2em;
+        justify-items: center;
+    }
+
+    .postit{
+        margin: 10px 0px ;
+        width: 90%;
+    }
+    .postit h2{
+        padding: 10px 0px
+    }
+    .postit img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .postit:hover {
+        transform: unset;
+        box-shadow: unset;
+    }
+
+    .welcome{
+        margin-bottom: 0;
+    }
+
+    #categories .postit{
+        margin: 10px 0px;
+        width: 85%;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px 10px 50px 10px;
+    }
+
+    #categories .postit img{
+        width: 150px;
+        height: 150px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    #categories .postit ul{
+        margin-top: 0px;
+        padding: 5px;
+    }
+
+    #categories .postit ul li a{
+        text-wrap: wrap;
+    }
+
+    #articles .postit img{
+        height: 250px;
+        margin: 0;
+    }
+
+    .submenu{
+        margin-top: 30px;
+        padding: 5px 0px;    }
+
+    #products img{
+        width: 300px;
+        height: 200px;
+        margin: 5px;
+    }
+
+    .product_images{
+        margin-top: 20px;
+    }
+
+    #products img:hover {
+        transform: unset;
+        cursor: unset;
+    }
+
+    #aboutus .postit img {
+        width: 170px;
+        height: 250px;
+    }
+
+    .form , .contacts{
+        width: 90%;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: auto;
+        justify-items: center;
+    }
+
+    .contacts{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .form{
+        border-radius: 0px 0px 20px 20px;
+    }
 }
