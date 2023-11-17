@@ -18,13 +18,12 @@ body {
 .main-container {
     width: 100%;
     display: grid;
-    grid-template-rows: 85px auto auto;
+    grid-template-rows: 80px auto auto;
     grid-template-areas:
         "header"
         "main"
         "footer";
     flex: 1;
-    margin-top: -5rem;
 }
 
 /*makes the header fixed in place and adjusts where it needs to be, it also aligns the items inside it*/
@@ -59,8 +58,8 @@ header img:hover {
 
 /*makes main not overlap with the fixed header*/
 main {
+    margin-top: 50px;
     text-align: center;
-    margin-top: 10rem;
     width: 100%;
     grid-area: main;
 }
@@ -249,7 +248,7 @@ nav a:hover {
     font-size: 1em;
     font-style: italic;
     font-weight: bold;
-    text-wrap: wrap;
+    white-space: normal;
 }
 
 /*removes the bullets*/
@@ -348,6 +347,10 @@ h1 {
     font-weight: bold;
 }
 
+#articles {
+    margin: 0;
+}
+
 /*adjusts the image on the articles*/
 #articles .postit img {
     height: 300px;
@@ -355,10 +358,7 @@ h1 {
     object-fit: cover;
 }
 
-/*makes the top margin 0*/
-#articles {
-    margin-top: 0px;
-}
+
 
 /*centers the items on the postit*/
 #articles .postit {
@@ -371,7 +371,6 @@ h1 {
 #articles .postit .link {
     font-size: 1.5em;
     font-weight: bold;
-    margin-top: auto;
     transition: transform .2s;
 }
 
@@ -821,6 +820,7 @@ button:focus {
         justify-items: center;
     }
 
+
     #categories_list {
         display: grid;
         grid-template-columns: 1fr;
@@ -1111,7 +1111,7 @@ button:focus {
     }
 
     #categories .postit ul li a {
-        text-wrap: wrap;
+        white-space: normal;
     }
 
     #articles .postit img {
