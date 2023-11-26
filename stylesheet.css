@@ -59,6 +59,7 @@ header img:hover {
 /*makes main not overlap with the fixed header*/
 main {
     margin-top: 50px;
+    margin-bottom: 20px;
     text-align: center;
     width: 100%;
     grid-area: main;
@@ -872,6 +873,7 @@ button:focus {
 
     #categories .postit ul {
         margin-top: 0px;
+        width: 100%;
     }
 
     #articles .postit img {
@@ -1139,4 +1141,96 @@ button:focus {
         justify-content: center;
     }
 
+}
+.button-signin{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #ffbf00;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    order: 3;
+    justify-self: flex-end;
+}
+
+/* Γενική διαμόρφωση φόρμας */
+#registrationForm {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to left, #ffbf00, #d19d00);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+#registrationForm fieldset {
+    width: 90%;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;  
+    justify-content: center;  
+}
+
+#registrationForm legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Στυλ για τα input, textarea, και select */
+#registrationForm input[type="text"],
+#registrationForm input[type="email"],
+#registrationForm input[type="tel"],
+#registrationForm input[type="password"],
+#registrationForm input[type="date"],
+#registrationForm #interestedAds,
+#registrationForm select {
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#registrationForm fieldset label{
+    font-weight: bold;
+    text-align: center;
+    width: 45%;
+}
+
+#signin button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    font-size: 1.5em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Στυλ για ενδείξεις σφάλματος επικύρωσης */
+#registrationForm input:invalid,
+#registrationForm select:invalid {
+    border-color: red;
+}
+
+#registrationForm span{
+    color: red;
+    font-weight: bold;
+    width: 100%;
 }
